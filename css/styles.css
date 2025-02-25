@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Alex+Brush&family=Charm:wght@400;700&family=MonteCarlo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+*{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo{
+    font-size: 30px;
+    font-family: "Agu Display","Alex Brush", "Charm","MonteCarlo", "Montserrat", "Playwrite GB S";
+}
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    display: none;
+}
+.navbar{
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+.two{
+    margin: 32px;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    padding: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    transition: 400ms;
+    font-family: "Montserrat";
+}
+nav ul li a:hover{
+    background-color: #8f8e8e;
+    border-radius: 4px;
+}
+
+.welcome {
+    margin: 20px;
+    text-align: left;
+}
+
+.welcome input{
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    padding: 10px;
+    margin-right: 20px;
+    width: 70%;
+    border-color: #1f1f1f;
+    transition: 400ms;
+    background: transparent;
+    transition: border-color 0.2s;
+    transition: background-color 0.5s;
+}
+
+@media (max-width : 760px){
+    .welcome input{
+        width: 100%;
+    }
+}
+
+.welcome input:focus {
+    padding-bottom: 7px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #8ddbea, #145db0);
+    border-image-slice: 1;
+    background-color: #d3dcdc;
+  }
+.welcome input::placeholder{
+    font-family: "Montserrat";
+}
+
+#sbmt{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color:rgb(101, 185, 240);
+    text-decoration: none;
+    font-family: "Montserrat";
+    border-radius: 20px;
+    border: rgb(101, 185, 240) solid;
+    -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+@media (max-width : 760px){
+    #sbmt{
+       padding: 5px 10px;
+       
+    }
+}
+
+#sbmt:hover{
+    background-color: rgb(101, 185, 240);
+    color: white;
+}
+
+.booking a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color:rgb(101, 185, 240);
+    text-decoration: none;
+    font-family: "Montserrat";
+    border-radius: 20px;
+    border: rgb(101, 185, 240) solid;
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+}
+
+.booking a:hover{
+    background-color: rgb(101, 185, 240);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: #444;
+        padding-top: 60px;
+        transition: left 0.3s ease-in-out;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    nav ul li {
+        padding: 15px;
+        border-bottom: 1px solid #555;
+    }
+}
+@media (max-width: 480px) {
+
+    .booking a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    color: white;
+    padding: 10px;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 1000;
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+#sidebar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+@media (max-width : 760px){
+    .info{
+        font-size: 0.8rem;
+    }
+}
+.info{
+    text-align: left; margin: 3rem;
+}
+p{
+    font-family: Montserrat; letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.places_top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+}
+.places_bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+}
+
+
+.dest{
+    width: 100%;
+    margin: 1rem;
+    padding: 7px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 4px 7px 7px 0px #00000042;
+}
+.dest:hover{
+    transform: scale(1.1);
+}
+.dest img{
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 10px;
+}
+h1{
+    font-size: 3rem ; text-align: left; margin: 3rem; font-family: Montserrat; margin-right: 10;
+}
+@media (max-width : 760px){
+    .places_top{
+        flex-direction: column;
+    }
+    .places_bottom{
+        flex-direction: column;
+    }
+    .dest{
+        padding-top: 10px;
+        width: 80%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    #hotels img{
+        margin: 1rem;
+    }
+    .developer{
+        max-height: 10px;
+    }
+    
+}
+#hotels img{
+    max-width: 12.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+#hotels p{
+    font-size: 2rem;
+    margin: 50px;
+    font-weight: bold;
+}
+
+.developer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    max-height: 20px;
+}
+#develop{
+    font-size: 21px;
+    font-family: "'Times New Roman', Times, serif";
+}
+.developer a{
+    text-decoration: none;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 1px;
+    transition: 400ms;
+}
+.developer a:hover{
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 4px;
+}

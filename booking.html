@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="css/booking.css">
+    <script defer src="js/booking.js"></script>
+    <style>
+        select:invalid {color: gray;}
+    </style>
+</head>
+<body style="background-image: url(img/fly.gif);">
+    <center><section class="booking-form">
+        <h2>Book Your Travel</h2>
+        
+        <label for="destination">Select Destination:</label>
+        <select required id="destination">
+            <option value="" disabled selected >Select Your Option</option>
+            <option value="Paris">Paris, France</option>
+            <option value="New York">New York, USA</option>
+            <option value="Tokyo">Tokyo, Japan</option>
+            <option value="Dubai">Dubai, UAE</option>
+            <option value="London">London, UK</option>
+            <option value="Rome">Rome, Italy</option>
+            <option value="Sydney">Sydney, Australia</option>
+            <option value="Bangkok">Bangkok, Thailand</option>
+            <option value="Toronto">Toronto, Canada</option>
+            <option value="Cape Town">Cape Town, South Africa</option>
+        </select>
+        <label for="date">Enter Date:</label>
+        <input type="text" placeholder="Enter Date" id="date" onfocus="(this.type='date')" onblur="(this.type='text')">
+        <div class="hotel-days-container">
+            <div class="hotel-section">
+                <label for="hotel">Select Hotel:</label>
+                <select required id="hotel">
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="10000">5 Star</option>
+                    <option value="7000">4 Star</option>
+                    <option value="5000">3 Star</option>
+                    <option value="2000">2 Star</option>
+                </select>
+            </div>
+            
+            <div class="days-section">
+                <label for="days">No. of Days:</label>
+                <input type="number" id="days" min="1" placeholder="Enter no. of days">
+            </div>
+        </div>
+        
+        <label for="flight">Select Flight Type:</label>
+        <select required id="flight">
+            <option value="" disabled selected>Select Your Option</option>
+            <option value="10000">Economy Class</option>
+            <option value="20000">First Class</option>
+            <option value="30000">Business Class</option>
+        </select>
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" min="1" placeholder="Enter no. of guests">
+        
+        <button onclick="calculateFare()">Proceed</button>
+        <h3>Total Fare: ₹<span id="fare">0</span></h3>
+        
+         <div class="card-details">
+            <label for="card">Enter Card Details:</label>
+            <input type="number" id="card" placeholder="Card Number" maxlength="16">
+            <label for="expiry">Expiry Date (MM/YY):</label>
+            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" placeholder="CVV" maxlength="3">
+        </div>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+    </section></center>
+    <br>
+    
+    <div id="confirmation-popup" class="popup hidden">
+        <h2>Booking Confirmed!</h2>
+        <div class="checkmark">✔</div>
+        <a href="index.html"><button onclick="closePopup()">Close</button></a>
+    </div>
+</body>
+</html>
+
+
+

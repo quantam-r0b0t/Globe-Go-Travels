@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/logos.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+        <header class="navbar">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <span class="logo">GLOBE GO</span>
+            <nav>
+                <ul>
+                    <li><a href="#places">Places</a></li>
+                    <li><a href="#hotels">Hotels/Flights</a></li>
+                    <li><a href="#booking">Bookings</a></li>
+                    <li><a href="#dev">Developer</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <nav id="sidebar">
+            <button class="close-btn" onclick="closeMenu()">✖</button>
+            <ul>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#hotels">Hotels/Flights</a></li>
+                <li><a href="#booking">Bookings</a></li>
+                <li><a href="#dev">Developer</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="img/2.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/3.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/4.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/5.jpg" alt="">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    
+    <section class="welcome">
+    <div class="two">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button id="sbmt" onclick="showWelcome()">Submit</button>
+        <h2 id="welcomeMessage"></h2>
+    </div>
+    </section>
+
+    <section>
+        <div class="info">
+            <p>
+                Globe Go is a travel booking website designed to make trip planning seamless and hassle-free. Whether users are looking for flights, hotels, or vacation packages, Globe Go provides a user-friendly platform with smart search features and competitive pricing. With secure payment options and personalized recommendations, travelers can easily find the best deals suited to their preferences. The site also offers interactive maps and curated travel guides to enhance the booking experience. Whether planning a quick getaway or a long vacation, Globe Go aims to be the go-to destination for effortless and reliable travel bookings.
+            </p>
+            <p style="margin-top: 1rem; font-size: 20px; font-weight: bold;">Globe Go – Your Ultimate Travel Companion</p>
+            <ul style="font-family: 'Montserrat'; padding: 1rem;">
+                <li>Comprehensive Travel Booking: Easily search and book flights, hotels, and vacation packages.</li>
+                <li>Personalized Recommendations: Get tailored travel suggestions based on user preferences.</li>
+                <li>Real-Time Price Comparisons: Ensure the best deals with up-to-date pricing information.</li>
+                <li>Secure Payment Gateways: Enjoy a safe and seamless booking experience.</li>
+                <li>24/7 Customer Support: Access assistance anytime, anywhere.</li>
+                <li>Ultimate Travel Companion: Designed for both business and leisure travelers to explore with ease</li>
+            </ul>
+        </div>
+    </section>
+    <section id="places">
+        <h1  >Destinations We Cover</h1>
+        <div class="places_top"> 
+            <div class="dest"><img src="img/paris.jpg" alt="paris">
+            <p>Paris, France</p></div>
+            <div class="dest"><img src="img/newyork.jpg" alt="new"><p>New York, USA</p></div>
+            <div class="dest"><img src="img/bangkok.jpg" alt="bang"><p>Bangkok, Thailand</p></div>
+            <div class="dest"><img src="img/capetown.jpg" alt=""><p>Cape Town, SA</p></div>
+            <div class="dest"><img src="img/dubai.jpg" alt=""><p>Dubai, UAE</p></div></div>
+        <div class="places_bottom">
+            <div class="dest"><img src="img/london.jpg" alt=""><p>London, UK</p></div>
+            <div class="dest"><img src="img/rome.jpg" alt=""><p>Rome, Italy</p></div>
+            <div class="dest"><img src="img/sidney.jpg" alt=""><p>Sydney, Australia</p></div>
+            <div class="dest"><img src="img/toronto.jpg" alt=""><p>Toronto, Canada</p></div>
+            <div class="dest"><img src="img/japan.jpg" alt=""><p>Tokyo, Japan</p></div>
+        </div>
+        </div>
+    </section>
+    <hr>
+    <section id="hotels">
+        <p>Our Hotels and Flight Partners</p>
+        <div class="logos">
+            <div class="logos-slide">
+            <img src="img/hotel1.png" alt="">
+            <img src="img/hotel2.png" alt="">
+            <img src="img/hotel3.png" alt="">
+            <img src="img/hotel4.png" alt="">
+            <img src="img/hotel6.png" alt="">
+            <img src="img/hotel5.png" alt="">
+        </div>
+    </div>
+    </section>
+    <section id="flights">
+        <div class="logos fli">
+            <div class="logos-slide flis" id="flis">
+            <img src="img/air1.png" alt="">
+            <img src="img/air2.png" alt="">
+            <img src="img/air3.png" alt="">
+            <img src="img/air4.png" alt="">
+            <img src="img/air5.png" alt="">
+        </div>
+    </div>
+    </section>
+    <section class="booking" id="booking" style="margin: 50px;">
+        <a href="booking.html">Go to Booking</a>
+    </section>
+    <hr>
+    <section class="developer" id="dev">
+        <div><a href="mailto:mayankm1946@gmail.com" id="Email">Email</a></div>
+        <div> <a href="https://www.instagram.com/mayank.m001/" target="_blank">Instagram</a></div>
+        <div> <a href="https://x.com/Bitwise_Mayank" target="_blank">Twitter</a></div>
+        <div> <a href="" target="_blank">Linked In</a></div>
+        <div> <a href="https://github.com/quantam-r0b0t" target="_blank">Git-Hub</a></div>
+</section>
+<footer class="background" style="background-color: rgb(47, 47, 47); color: white; font-size: 10px;">
+    <center><p>
+        Copyright &copy; 2025 globe-go.com - All Rights Reserved.
+    </p></center>
+</footer>
+    <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+
+        var copy1 = document.querySelector(".flis").cloneNode(true);
+        document.querySelector(".fli").appendChild(copy1);
+    </script>
+    <script src="js/slide.js"></script>
+</body>
+</html>
