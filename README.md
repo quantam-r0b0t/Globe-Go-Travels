@@ -1,1 +1,1 @@
-Link : globe-go.netlify.app
+Link : https://globe-go.netlify.app/
